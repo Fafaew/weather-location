@@ -1,5 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import axios from 'axios'
+import './App.css'
+import { Card } from 'semantic-ui-react'
+
 
 function App() {
   const[location, setLocation] = useState(false);
@@ -41,17 +44,22 @@ function App() {
       )    
   } else {
       return (
-        <Fragment>
-          <h3>Clima nas suas Coordenadas ({weather['weather'][0]['description']})</h3>  
+        <Card>
+          <Card.Content>
+            <Card.Header className="header">
+              <h3>Clima nas suas Coordenadas ({weather['weather'][0]['description']})</h3>  
+            </Card.Header>
           <hr />
-          <ul>
-          <li>Temperatura atual: {weather['main']['temp']}º</li>
-          <li>Temperatura maxima: {weather['main']['temp_max']}º</li>
-          <li>Temperatura minima: {weather['main']['temp_min']}º</li>
-          <li>pressão: {weather['main']['pressure']}ºhpa</li>
-          <li>Umidade: {weather['main']['humidity']}%</li>
+          <ul className="main">
+          <li className="temp">Temperatura atual: {weather['main']['temp']}º</li>
+          <li className="temp">Temperatura maxima: {weather['main']['temp_max']}º</li>
+          <li className="temp">Temperatura minima: {weather['main']['temp_min']}º</li>
+          <li className="temp">pressão: {weather['main']['pressure']}ºhpa</li>
+          <li className="temp">Umidade: {weather['main']['humidity']}%</li>
           </ul>
-        </Fragment>
+          </Card.Content>
+
+        </Card>
       );
 
     }
