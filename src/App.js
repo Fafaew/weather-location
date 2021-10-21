@@ -57,7 +57,7 @@ function App() {
       )    
   } else {
       return (
-        <Card>
+        <Card className="main-container">
           <Card.Content>
             <Card.Header className="header">
               <h3>Clima nas suas Coordenadas ({weather['weather'][0]['description']})</h3>  
@@ -81,7 +81,7 @@ function App() {
                     </h2>
                     <div className="city-temp">
                         {Math.round(weather.main.temp)}
-                        <sup>&deg;C</sup>
+                        <sup>&deg;C</sup>+
                     </div>
                     <div className="info">
                         <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
