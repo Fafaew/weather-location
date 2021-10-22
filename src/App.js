@@ -57,7 +57,7 @@ function App() {
       )    
   } else {
       return (
-        <Card className="main-container">
+        <Card >
           <Card.Content>
             <Card.Header className="header">
               <h3>Clima nas suas Coordenadas ({weather['weather'][0]['description']})</h3>  
