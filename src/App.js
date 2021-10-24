@@ -6,10 +6,8 @@ import "./App.css";
 function App() {
   const [location, setLocation] = useState(false);
   const [weather, setWeather] = useState(false);
-
   const [query, setQuery] = useState("");
-  // const [weather, setWeather] = useState({});
-
+  
   const search = async (e) => {
     if (e.key === "Enter") {
       const data = await fetchWeather(query);
@@ -49,18 +47,6 @@ function App() {
   } else {
     return (
       <Fragment>
-          <div className="actualCity">
-            <h3>Weather in {weather["name"]}</h3>
-            <hr />
-            <ul>
-              <li>Actual Temperature: {weather["main"]["temp"]}º</li>
-              <li>Max Temperature: {weather["main"]["temp_max"]}º</li>
-              <li>Min Temperature: {weather["main"]["temp_min"]}º</li>
-              <li>Pressure: {weather["main"]["pressure"]}ºhpa</li>
-              <li>Humidity: {weather["main"]["humidity"]}%</li>
-            </ul>
-          </div>
-
         <div className="main-container">
           <input
             type="text"
@@ -73,7 +59,7 @@ function App() {
           {weather.main && (
             <div className="city">
               <h2 className="city-name">
-                <span>{weather.name}</span>
+                <span>Weather in {weather.name}</span>
                 <sup>{weather.sys.country}</sup>
               </h2>
               <div className="city-temp">
