@@ -41,7 +41,13 @@ function App() {
   }, []);
 
   if (location === false) {
-    return <Fragment> You need turn on the location in your browser</Fragment>;
+    return <Fragment> 
+      <div className="styleDenyCity">
+        <h2 className="denyCity">
+          <span> You need turn on the location in your browser</span>                
+        </h2>
+      </div>
+    </Fragment>;
   } else if (weather === false) {
     return <Fragment>Loading Weather...</Fragment>;
   } else {
