@@ -7,7 +7,7 @@ function App() {
   const [location, setLocation] = useState(false);
   const [weather, setWeather] = useState(false);
   const [query, setQuery] = useState("");
-  
+
   const search = async (e) => {
     if (e.key === "Enter") {
       const data = await fetchWeather(query);
@@ -19,7 +19,7 @@ function App() {
 
   let getWeather = async (lat, long) => {
     let res = await axios.get(
-      "http://api.openweathermap.org/data/2.5/weather",
+      "https://api.openweathermap.org/data/2.5/weather",
       {
         params: {
           lat: lat,
