@@ -65,3 +65,18 @@ Follow the following steps to get development environment running.
    npm start
    ```
 
+   <br/>
+  <h2>Developed using </h2>
+  <br />
+<div>         
+      <img />
+      <img />
+      <img />
+      <img alt="JavaScript Logo" src="https://img.icons8.com/color/60/000000/javascript--v1.png"/> 
+      <img />
+      <img />
+      <img />
+      <img />
+      <img alt="React logo"  style="" src="https://img.icons8.com/officel/60/000000/react.png"/>    
+</div>
+
