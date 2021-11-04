@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 import { fetchWeather } from "./api/fetchWeather";
 import "./App.css";
+import logo from './images/logo.png'
 
 function App() {
   const [location, setLocation] = useState(false);
@@ -54,6 +55,7 @@ function App() {
     return (
       <Fragment>
         <div className="main-container">
+        <img className="logo" src={logo} alt="" />
           <input
             type="text"
             className="search"
